@@ -6,6 +6,12 @@ Drag a window to the left or right edge, hold for 0.3 seconds, then release. The
 
 This is a standalone Lua module extracted from Pavel's accepted Hammerspoon setup. It does not require the Window Switcher or any other utility from that setup. Hammerspoon provides the window and mouse APIs; those libraries are not bundled here.
 
+## Demo
+
+[![Two working windows arranged side by side](demo/preview.jpg)](demo/paired-window-snap.mp4)
+
+[Watch or download the 17-second MP4](demo/paired-window-snap.mp4). It shows two pairs formed by dragging to a side edge, recorded on the author's existing Hammerspoon setup. The recording illustrates the behavior; it is not a clean-install test of this extracted module.
+
 ## Install alongside an existing config
 
 1. Back up your existing `~/.hammerspoon/init.lua` and any local modules before editing.
@@ -72,7 +78,7 @@ For the current Hammerspoon session, call `pairedWindowSnap:stop()` in its conso
 
 Run `lua tests.lua` with a Lua 5.3/5.4 interpreter for the portable fake-window tests. This does not install or start Hammerspoon.
 
-The accompanying [validation report](validation.json) distinguishes **isolated tests** from real desktop use. The extracted module was loaded and exercised with fake `hs` APIs in a Lua interpreter: geometry, prior-window choice, thresholds, invalid frames, permissions and lifecycle were checked. No real windows or taps were started for these tests. The previous full setup was accepted by Pavel; this exact standalone build has not been installed on another Mac or given a new live end-to-end acceptance. No live demo recording is included. The synthetic tests are not video proof.
+The accompanying [validation report](validation.json) distinguishes **isolated tests** from real desktop use. The extracted module was loaded and exercised with fake `hs` APIs in a Lua interpreter: geometry, prior-window choice, thresholds, invalid frames, permissions and lifecycle were checked. No real windows or taps were started for these tests. The previous full setup was accepted by Pavel; this exact standalone build has not been installed on another Mac or given a new live end-to-end acceptance. The demo above was supplied by Pavel on 8 October 2026 from his existing setup. The synthetic tests are not video proof of this extracted build.
 
 API references: [window filter](https://www.hammerspoon.org/docs/hs.window.filter.html), [event tap](https://www.hammerspoon.org/docs/hs.eventtap.html). Documentation checked 8 October 2026.
 
